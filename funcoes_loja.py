@@ -19,9 +19,9 @@ def alugar():
         valor_carro = 250.00 
        
 
-    if pcd == 1:
+    if pcd == 0:
         valor_carro -= valor_carro * 0.3
-        valor_total = valor_carro * dias_aluguel
+    valor_total = valor_carro * dias_aluguel
 
     
 
