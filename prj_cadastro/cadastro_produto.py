@@ -28,10 +28,14 @@ def lista():
     
     produtos_cadastrados = [prod01, prod02, prod03]
 
-    return render_template('lista.html',
+    return render_template('index.html',
                            descricao ="Aqui estão seus produtos cadastrados", 
                            lista_prod = produtos_cadastrados)
 #render template busca a pagina dentro de uma paste templates 
+
+@app.route('/cadastrar')
+def cadastrar_produto():
+    return render_template("cadastrar.html")
 
 app.run()
 
