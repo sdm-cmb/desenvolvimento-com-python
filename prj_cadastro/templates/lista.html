@@ -5,13 +5,16 @@
     <title>LIsta de produtos </title>
     <style type="text/css">
         table,th, tr,td{
-            border: 3px solid #000000;
-            color:plum
+            border: 3px solid #5f0000;
+            color:rgb(248, 21, 248)
         }
     
     </style>
 </head>
 <body>
+
+    <h2 style= ="text-align: center;">{{ descricao }}</h2>
+
    <table>
     <tr>
         <th>Nome Produto</th>
@@ -19,25 +22,21 @@
         <th>Preço R$</th>
     </tr>
 
+    <!-- { %  % } bloco para criar uma repetição -->
+
+    {% for produto in lista_prod %}
+
     <tr>
-        <td>Camisa</td>
-        <td>Nike</td>
-        <td>R$ 250,00</td>
+        <td> {{ produto.nome }}</td>
+        <td>{{ produto.marca }}</td>
+        <td>{{ produto.preco }}</td>
     </tr>
-    <tr>
-        <td>Bermuda</td>
-        <td>Adidas</td>
-        <td>R$ 99,99</td>
-    </tr>
-    <tr>
-        <td>Boné</td>
-        <td>Oakley</td>
-        <td>R$ 200,00</td>
-    </tr>
+    {%endfor%}
+
    </table>
     <style>
         body{
-            background-color: rgb(38, 0, 255);
+            background-color: rgb(73, 73, 73);
         }
     </style>
 </body>
