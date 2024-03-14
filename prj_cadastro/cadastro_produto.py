@@ -1,5 +1,5 @@
 
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 #flask com f minusculo é a biblioteca, Flask com F maiusculo é a classe 
 
 
@@ -31,12 +31,24 @@ def lista():
     return render_template('index.html',
                            descricao ="Aqui estão seus produtos cadastrados", 
                            lista_prod = produtos_cadastrados)
-#render template busca a pagina dentro de uma paste templates 
+#render template busca a pagina dentro de uma pasta templates 
+
 
 @app.route('/cadastrar')
 def cadastrar_produto():
-    return render_template("cadastrar.html")
+    return render_template("cadastrar.html", methods="post" ,)
+    nome_prod: request.form['Txtnome']
+    marca_prod: request.form['Txtmarca']
+    preco_prod: request.form['Txtpreco']
 
+    novo_produto = Produto(nome_prod, 
+                           marca_prod,
+                             preco_prod)
+    
+    cadastrar_produto.append[novo_produto]
+    return render_template("lista.html",
+                           descricao= "Novo Produto Cadastrado",
+                           lista_prod = produtos_cadastrados)
 app.run()
 
 #400 a 404 - pagina nao encontrada nos rastros 
