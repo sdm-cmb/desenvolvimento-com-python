@@ -1,4 +1,4 @@
-use loja;
+/*use loja;
 
 create table produto(
 	id_produto 	int primary key auto_increment not null,
@@ -10,7 +10,27 @@ create table produto(
     values('Camisa', 'Nike','250.00'),
     ('Calça','Adidas','100.00'),
     ('Fone','JBL','130.00'),
-    ('Micro-Fone','JBL','300.99');
+    ('Micro-Fone','JBL','300.99');*/
+    
+    
+    select *  from produto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
     
     /*c = Crud
     u = update atualiza tablea
@@ -23,8 +43,9 @@ create table produto(
     update produto set preco_produto = 110.00
     where id_produto = 02;*/  /*atualiza os dados da tabela*/ 
     
-    select *  from produto
-    
+
+
+
     /*select * from produto where preco_produto < 150.00;
     select * from produto where marca_produto = 'Nike'; 
     
@@ -32,6 +53,8 @@ create table produto(
     select * from produto where nome_produto like '%e'; /*busca palavras com e no final
     select * from produto where nome_produto like '%a%';/*busca palavras que contem a indenpedente da posição
     */
+
+    select * from produto
     
     
     
