@@ -62,7 +62,7 @@ def adicionar_produto():
     marca_prod = request.form['TxtMarca']
 
     #a linha abaixo altera o (,) por (.)
-    preco_prod = request.form['Txtpreco'].replace(',','.')
+    preco_prod = request.form['TxtPreco'].replace(',','.')
     
     # linha abaixo converto o valor digitado pelo usuario
     preco_prod = float(preco_prod)
@@ -70,6 +70,7 @@ def adicionar_produto():
     produto_adicionado = Produto(nome_produto = nome_prod,
                                  marca_produto = marca_prod,
                                  preco_produto = preco_prod)
+    
     
     # a linha abaixo é feito um preparo para enviar para o banco
     db.session.add(produto_adicionado)
